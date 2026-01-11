@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambira Tudu | Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">HT</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#interests" class="nav-link">Interests</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="animated-bg"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Hambira Tudu</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        Experienced Software Development Engineer with 9 years of expertise in developing RESTful web services, 
+                        integrating user-facing elements, and designing server-side architecture.
+                    </p>
+                    <p>
+                        I'm an individual contributor skilled in Python, MongoDB, PostgreSQL, Flask, FastAPI, and Microservices, 
+                        with a strong understanding of relational and NoSQL databases. I have a proven track record of automating 
+                        data movements and deploying backend applications to cloud platforms like AWS.
+                    </p>
+                    <p>
+                        I've completed projects in NLP, Computer Vision, and Machine Learning, and excel at collaborating with 
+                        internal teams to understand user requirements and deliver technical solutions. With strong debugging skills 
+                        and a deep understanding of software engineering principles, I design modular, maintainable, and scalable 
+                        backend applications using Python.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="9">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Microservices</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Career Timeline</h2>
+            <p class="section-subtitle">My professional journey through the years</p>
+            <div class="timeline">
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <h3>Senior Lead Engineer</h3>
+                        <h4>Quest Global</h4>
+                        <p>September 2025 - Present</p>
+                        <ul>
+                            <li>Developing software applications and creating analytical algorithms for IoT Projects</li>
+                            <li>Working with multiple microservices and packages that can be used as libraries or packages in Python</li>
+                            <li>Designing and implementing scalable Python libraries and packages for reusable components</li>
+                            <li>Leading development of analytical algorithms and software solutions for IoT applications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>Python Developer</h3>
+                        <h4>Teksystem (Walmart Global Tech)</h4>
+                        <p>Oct 2024 - September 2025</p>
+                        <ul>
+                            <li>Developed and maintained a complex Computer Vision-based system (Exit Tech) leveraging Python for image processing tasks across 15+ microservices</li>
+                            <li>Implemented event-driven architecture using RabbitMQ and Redis for high-speed data caching</li>
+                            <li>Built robust CI/CD pipelines with Pytest for testing and seamless production deployments</li>
+                            <li>Contributed to architectural decisions and infrastructure optimization in a cloud-native microservices ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Software Development Engineer</h3>
+                        <h4>AVR Edge Networks</h4>
+                        <p>Oct 2020 - June 2025</p>
+                        <ul>
+                            <li>Developed RESTful web services using Flask in Python</li>
+                            <li>Strong understanding of ORM libraries like SQLAlchemy and Data Migrations</li>
+                            <li>Experience with relational databases (MySQL, PostgreSQL) and NoSQL databases (MongoDB)</li>
+                            <li>Led a team of developers for one year, successfully managing project timelines</li>
+                            <li>Experience in designing and implementing multi-tenant SaaS applications</li>
+                            <li>Familiar with CI/CD pipelines using Jenkins and GitLab CI</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2017">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2017</div>
+                        <h3>Data Engineer</h3>
+                        <h4>Ebisu Technologies</h4>
+                        <p>July 2017 - Sept 2020</p>
+                        <ul>
+                            <li>Played a pivotal role in building a software product from inception to launch</li>
+                            <li>Completed NLP projects: NER, Sentiment Analysis, Spam Detection, Language Detection, Spell Checking, Word2vec, Intent Classification</li>
+                            <li>Developed image processing applications for facial recognition, object detection, and object recognition</li>
+                            <li>Developed and maintained batch and streaming data pipelines using PySpark and Kafka</li>
+                            <li>Delivered business insights via custom Streamlit dashboards</li>
+                            <li>Web scraping using Selenium, BeautifulSoup, Scrapy</li>
+                            <li>Worked with AWS services (Lambda, S3, EC2, ALB)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2016">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2016</div>
+                        <h3>Software Engineer</h3>
+                        <h4>Capgemini</h4>
+                        <p>June 2016 - June 2017</p>
+                        <ul>
+                            <li>Designed and optimized database schemas to support scalable and efficient data storage solutions</li>
+                            <li>Developed and maintained backend applications using Python</li>
+                            <li>Created unit tests and implemented test-driven development practices</li>
+                            <li>Integrated RESTful APIs and implemented automation scripts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Technologies I work with</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">🐍</div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚡</div>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🚀</div>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎯</div>
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📊</div>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚡</div>
+                            <span>PySpark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Services</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">🐘</div>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🍃</div>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔴</div>
+                            <span>Redis</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🗄️</div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔍</div>
+                            <span>Elasticsearch</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🐰</div>
+                            <span>RabbitMQ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">👁️</div>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🧠</div>
+                            <span>NLP</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📊</div>
+                            <span>NumPy, Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔬</div>
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔥</div>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📝</div>
+                            <span>Tesseract OCR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">☁️</div>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔵</div>
+                            <span>Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🐳</div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">☸️</div>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚙️</div>
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔧</div>
+                            <span>GitLab CI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Architecture & Patterns</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">🏗️</div>
+                            <span>Microservices</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🔌</div>
+                            <span>RESTful APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📐</div>
+                            <span>System Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <span>Design Patterns</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🗄️</div>
+                            <span>SQLAlchemy ORM</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎯</div>
+                            <span>Agile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>IoT Analytics Platform</h3>
+                        <p>A scalable microservices platform for IoT data collection, processing, and analytics. Features real-time sensor data ingestion, analytical algorithms for predictive maintenance, and Python libraries for reusable components.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Computer Vision Pipeline System</h3>
+                        <p>Enterprise-grade image processing system with 15+ microservices handling computer vision tasks. Features event-driven architecture with RabbitMQ, Redis caching, and containerized deployment using Docker and Kubernetes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>NLP Sentiment Analysis API</h3>
+                        <p>RESTful API service for natural language processing tasks including sentiment analysis, named entity recognition, language detection, and intent classification. Built with Flask and deployed on AWS with serverless architecture.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">AWS Lambda</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Data Streaming Pipeline</h3>
+                        <p>High-performance data processing pipeline using PySpark and Kafka for real-time batch and streaming data transformations. Includes custom Streamlit dashboards for data visualization and business insights.</p>
+                        <div class="project-tags">
+                            <span class="tag">PySpark</span>
+                            <span class="tag">Kafka</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-tenant SaaS Platform</h3>
+                        <p>Enterprise SaaS platform with multi-tenant architecture, RESTful APIs, and microservices design. Features SQLAlchemy ORM, PostgreSQL database, authentication/authorization, and CI/CD pipelines with Jenkins and GitLab CI.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">SQLAlchemy</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Project">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Python Library Package Suite</h3>
+                        <p>Reusable Python library packages for IoT data processing and analytical algorithms. Designed as modular, maintainable components that can be integrated into microservices architecture. Includes comprehensive documentation and unit tests.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pytest</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="interests-section">
+        <div class="container">
+            <h2 class="section-title">Interests & Hobbies</h2>
+            <p class="section-subtitle">What keeps me inspired</p>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">👁️</div>
+                    <h3>Computer Vision</h3>
+                    <p>Building complex image processing systems and computer vision applications using Python, OpenCV, and deep learning frameworks.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🧠</div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Working on NLP projects including NER, sentiment analysis, spam detection, language detection, and intent classification.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">☁️</div>
+                    <h3>Cloud Architecture</h3>
+                    <p>Designing and deploying scalable microservices architecture on AWS and Azure cloud platforms.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">📊</div>
+                    <h3>Data Engineering</h3>
+                    <p>Building batch and streaming data pipelines using PySpark and Kafka to process high-volume datasets.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🔧</div>
+                    <h3>System Design</h3>
+                    <p>Architecting robust, scalable backend systems with microservices, event-driven architecture, and best practices.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🚀</div>
+                    <h3>DevOps & CI/CD</h3>
+                    <p>Implementing automated CI/CD pipelines, containerization with Docker/Kubernetes, and infrastructure optimization.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">📡</div>
+                    <h3>IoT Projects</h3>
+                    <p>Developing software applications and creating analytical algorithms for IoT projects with microservices and Python libraries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's work together on your next project</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:hambira.uchiha@gmail.com">hambira.uchiha@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+918790428634">+91 8790428634</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="#" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐙</div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="#" target="_blank">View my work</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hambira Tudu. All rights reserved.</p>
+            <p>Built with passion and attention to detail</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

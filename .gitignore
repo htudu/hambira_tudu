@@ -42,5 +42,7 @@ ENV/
 node_modules/
 npm-debug.log*
 
-# PDF files (optional - you may want to keep your resume PDF)
-# *.pdf
+# Resume files - keep locally but don't commit to git
+resume.md
+resume.txt
+*.pdf

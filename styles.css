@@ -1,4 +1,83 @@
 /* ===================================
+   Shoji Screen Transition
+   =================================== */
+.shoji-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    pointer-events: none;
+    /* Allows clicks to pass through after animation */
+}
+
+.shoji-panel {
+    width: 50%;
+    height: 100%;
+    background-color: #fdfaf7;
+    /* Washi paper color */
+    position: relative;
+    border-right: 8px solid #2a2a2a;
+    /* Wooden frame center */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    /* Faster for nav transitions */
+}
+
+.shoji-left {
+    border-right: 4px solid #2a2a2a;
+}
+
+.shoji-right {
+    border-left: 4px solid #2a2a2a;
+    border-right: none;
+}
+
+/* Shoji Grid Pattern */
+.shoji-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(#e5e0d8 2px, transparent 2px),
+        linear-gradient(90deg, #e5e0d8 2px, transparent 2px);
+    background-size: 100% 20%, 33.3% 100%;
+    /* Horizontal lines every 20%, Vertical every 33% */
+    opacity: 0.5;
+}
+
+.shoji-emblem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 80px;
+    font-weight: 900;
+    color: #1a1a1a;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Open State */
+.shoji-overlay.open .shoji-left {
+    transform: translateX(-100%);
+}
+
+.shoji-overlay.open .shoji-right {
+    transform: translateX(100%);
+}
+
+.shoji-overlay.open .shoji-emblem {
+    opacity: 0;
+}
+
+/* ===================================
    Reset & Base Styles
    =================================== */
 * {
@@ -117,20 +196,34 @@ h6 {
     font-size: 0.95rem;
     transition: var(--transition);
     position: relative;
+    padding: 0.5rem 0;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    transition: var(--transition);
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Brush stroke texture simulation using clip-path */
+    clip-path: polygon(0% 10%, 5% 0%, 10% 20%, 20% 5%, 30% 15%,
+            40% 5%, 50% 20%, 60% 5%, 70% 15%, 80% 5%,
+            90% 20%, 95% 0%, 100% 10%, 100% 90%,
+            95% 100%, 90% 80%, 80% 95%, 70% 85%,
+            60% 95%, 50% 80%, 40% 95%, 30% 85%,
+            20% 95%, 10% 80%, 5% 100%, 0% 90%);
 }
 
-.nav-link:hover::after,
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 .nav-link.active::after {
     width: 100%;
 }

@@ -521,6 +521,57 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation complete class
     document.body.classList.add('loaded');
 
+    // Trigger Shoji Screen Transition on initial load
+    setTimeout(() => {
+        const shojiOverlay = document.getElementById('shoji-overlay');
+        if (shojiOverlay) {
+            shojiOverlay.classList.add('open');
+        }
+    }, 800);
+
+    // Initial Active Link check
+    setActiveLink();
+
+    // Shoji Navigation Transition
+    document.querySelectorAll('.nav-link, .btn').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+
+            // Only process internal hash links
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+                const shojiOverlay = document.getElementById('shoji-overlay');
+
+                if (targetSection && shojiOverlay) {
+                    // 1. Close Shoji Doors
+                    shojiOverlay.classList.remove('open');
+
+                    // 2. Wait for close animation (800ms)
+                    setTimeout(() => {
+                        // 3. Scroll to section instantly
+                        targetSection.scrollIntoView({ behavior: 'auto' });
+
+                        // 4. Update URL hash without scrolling
+                        history.pushState(null, null, href);
+
+                        // 5. Open Shoji Doors
+                        setTimeout(() => {
+                            shojiOverlay.classList.add('open');
+                        }, 400); // Short pause while closed
+                    }, 800); // Match CSS transition duration
+                }
+            }
+        });
+    });
+
+    // Observe all major sections for ink wash reveal
+    const sections = document.querySelectorAll('section:not(.hero)');
+    sections.forEach(section => {
+        inkWashObserver.observe(section);
+    });
+
     // Create falling cherry blossoms
     createSakuraPetals();
 

@@ -8,21 +8,53 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    /* Vibrant HSL Primary Colors */
+    --primary-h: 239;
+    --primary-s: 84%;
+    --primary-l: 67%;
+    --primary-color: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-dark: hsl(var(--primary-h), var(--primary-s), 55%);
+
+    /* Secondary and Accent */
+    --secondary-h: 263;
+    --secondary-s: 91%;
+    --secondary-l: 66%;
+    --secondary-color: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+
+    --accent-h: 330;
+    --accent-s: 81%;
+    --accent-l: 60%;
+    --accent-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+
+    /* Neutral Palette */
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
     --bg-light: #f9fafb;
-    --bg-dark: #111827;
+    --bg-dark: #0f172a;
     --white: #ffffff;
     --border-color: #e5e7eb;
+
+    /* Shadows and Transitions - Restored after testing confirmed they are not the cause of edge issues */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Native Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-primary: #f3f4f6;
+        --text-secondary: #9ca3af;
+        --bg-light: #111827;
+        --white: #0f172a;
+        --border-color: #374151;
+        --primary-l: 75%;
+        /* Slightly lighter for better contrast in dark mode */
+        --secondary-l: 75%;
+        --accent-l: 70%;
+    }
 }
 
 html {
@@ -162,11 +194,29 @@ body {
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     opacity: 0.1;
+    pointer-events: none;
+    /* Ensure it doesn't interfere with clicks */
+}
+
+@media (max-width: 768px) {
+
+    .animated-bg,
+    .floating-shapes {
+        display: none;
+        /* Remove heavy gradients/shapes on mobile to fix edge shadows */
+    }
 }
 
 @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .hero-content {
@@ -188,6 +238,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -235,8 +286,16 @@ body {
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
 }
 
 .hero-buttons {
@@ -324,7 +383,10 @@ body {
 .shape {
     position: absolute;
     border-radius: 20px;
-    opacity: 0.8;
+    opacity: 0.4;
+    /* Reduced from 0.8 for better content clarity */
+    filter: blur(40px);
+    /* Add blur for a softer, premium look */
     animation: float 6s ease-in-out infinite;
 }
 
@@ -356,8 +418,15 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
 }
 
 .scroll-indicator {
@@ -392,8 +461,15 @@ body {
 }
 
 @keyframes scroll {
-    0% { opacity: 1; top: 10px; }
-    100% { opacity: 0; top: 30px; }
+    0% {
+        opacity: 1;
+        top: 10px;
+    }
+
+    100% {
+        opacity: 0;
+        top: 30px;
+    }
 }
 
 /* ===================================
@@ -1022,6 +1098,27 @@ section {
     .btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
+    }
+
+    /* Scale down background shapes on small screens */
+    .shape-1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .shape-2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shape-3 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .shape {
+        opacity: 0.2;
+        /* Even lower opacity for small mobile screens */
     }
 }
 

@@ -173,6 +173,24 @@ body {
     overflow: hidden;
 }
 
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: auto;
+    /* Allow mouse interaction for the animation */
+}
+
+@media (max-width: 768px) {
+    #hero-canvas {
+        display: none;
+        /* Hide on mobile to improve performance as agreed previously */
+    }
+}
+
 .animated-bg {
     position: absolute;
     width: 200%;
@@ -742,6 +760,8 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    perspective: 1000px;
+    /* Add perspective for 3D effects */
 }
 
 .project-card {
@@ -749,11 +769,12 @@ section {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: var(--transition);
+    transition: var(--transition), transform 0.1s ease-out;
+    /* Match JS update speed */
+    transform-style: preserve-3d;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
     box-shadow: var(--shadow-xl);
 }
 

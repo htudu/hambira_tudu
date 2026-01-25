@@ -26,6 +26,7 @@ This project is a high-performance, responsive portfolio website designed to sho
 - **Glassmorphism & Gradients**: Modern aesthetic using semi-transparent elements and subtle gradients for a premium feel.
 - **Parallax Hero**: A subtle parallax effect on the landing section for depth.
 - **Visitor Tracker**: A live hit counter in the footer powered by `hits.sh`.
+- **Professional Analytics**: Full traffic and behavior tracking integrated with Google Analytics 4.
 
 ### 3. Content Sections
 - **About Me**: Professional summary and key technical stats.

@@ -1024,3 +1024,16 @@ section {
         font-size: 0.9rem;
     }
 }
+
+/* Visitor Counter */
+.visitor-count {
+    margin-top: 1rem;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.visitor-count:hover {
+    opacity: 1;
+}

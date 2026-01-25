@@ -21,6 +21,8 @@ A modern, responsive portfolio website showcasing my professional experience, sk
 ## Deployment
 
 This site is hosted on GitHub Pages.
+- **Repository**: [htudu/hambira_tudu](https://github.com/htudu/hambira_tudu)
+- **Live Site**: [https://htudu.github.io/hambira_tudu/](https://htudu.github.io/hambira_tudu/)
 
 ## Contact
 

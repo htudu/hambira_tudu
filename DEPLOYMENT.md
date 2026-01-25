@@ -36,8 +36,9 @@ git push -u origin main
 
 ## Step 4: Access Your Website
 
-Your website will be available at:
-- `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+Your website is available at:
+- `https://htudu.github.io/hambira_tudu/`
+- Repository: [https://github.com/htudu/hambira_tudu](https://github.com/htudu/hambira_tudu)
 
 **Note:** It may take a few minutes (1-5 minutes) for the site to go live after enabling GitHub Pages.
 

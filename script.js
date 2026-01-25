@@ -472,14 +472,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation complete class
     document.body.classList.add('loaded');
 
-    // Initialize Network Background (Desktop Only)
-    if (window.innerWidth > 768) {
-        new ParticleNetwork();
-
-        // Initialize 3D Tilt for projects
-        const cards = document.querySelectorAll('.project-card');
-        cards.forEach(card => new VanillaTilt(card));
-    }
-
-    console.log('Portfolio website loaded successfully!');
+    console.log('Portfolio website (Japan Theme) loaded successfully!');
 });

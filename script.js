@@ -464,6 +464,55 @@ class VanillaTilt {
     }
 }
 
+// ===================================
+// Cherry Blossom Petals (Sakura)
+// ===================================
+function createSakuraPetals() {
+    // Only run on desktop
+    if (window.innerWidth <= 768) return;
+
+    const heroSection = document.querySelector('.hero');
+    if (!heroSection) return;
+
+    // Create container for petals
+    let sakuraContainer = heroSection.querySelector('.sakura-container');
+    if (!sakuraContainer) {
+        sakuraContainer = document.createElement('div');
+        sakuraContainer.className = 'sakura-container';
+        heroSection.querySelector('.hero-background').appendChild(sakuraContainer);
+    }
+
+    // Create 15 petals with random properties
+    const petalCount = 15;
+
+    for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'sakura-petal';
+
+        // Random starting position
+        const startX = Math.random() * 100;
+        petal.style.left = `${startX}%`;
+
+        // Random drift (horizontal movement)
+        const drift = (Math.random() - 0.5) * 100; // -50px to 50px
+        petal.style.setProperty('--drift', `${drift}px`);
+
+        // Random rotation
+        const rotation = Math.random() * 720; // 0 to 720 degrees
+        petal.style.setProperty('--rotation', `${rotation}deg`);
+
+        // Random animation duration (slower = more graceful)
+        const duration = 15 + Math.random() * 10; // 15-25 seconds
+        petal.style.animationDuration = `${duration}s`;
+
+        // Random delay for staggered effect
+        const delay = Math.random() * 10;
+        petal.style.animationDelay = `${delay}s`;
+
+        sakuraContainer.appendChild(petal);
+    }
+}
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial active nav link
@@ -471,6 +520,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add loading animation complete class
     document.body.classList.add('loaded');
+
+    // Create falling cherry blossoms
+    createSakuraPetals();
 
     console.log('Portfolio website (Japan Theme) loaded successfully!');
 });
